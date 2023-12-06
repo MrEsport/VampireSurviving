@@ -411,6 +411,8 @@ GameObject:
   m_Component:
   - component: {fileID: 707098697}
   - component: {fileID: 707098696}
+  - component: {fileID: 707098699}
+  - component: {fileID: 707098698}
   m_Layer: 0
   m_Name: tilemap_110
   m_TagString: Untagged
@@ -485,6 +487,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707098698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707098695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccf0af6d2e74b944947b51056683901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    Health: 100
+    MoveSpeed: 1.75
+    BaseDamage: 5
+--- !u!114 &707098699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707098695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85bc1a86818d564599a89994ed006e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entity: {fileID: 707098698}
+  targetTransform: {fileID: 396105485}
 --- !u!1 &763145953
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,6 +693,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1537907604}
   - component: {fileID: 1537907603}
+  - component: {fileID: 1537907606}
+  - component: {fileID: 1537907605}
   m_Layer: 0
   m_Name: tilemap_109
   m_TagString: Untagged
@@ -735,6 +769,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1537907605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537907602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccf0af6d2e74b944947b51056683901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    Health: 100
+    MoveSpeed: 1
+    BaseDamage: 5
+--- !u!114 &1537907606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537907602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85bc1a86818d564599a89994ed006e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entity: {fileID: 1537907605}
+  targetTransform: {fileID: 396105485}
 --- !u!1 &2117106882
 GameObject:
   m_ObjectHideFlags: 0

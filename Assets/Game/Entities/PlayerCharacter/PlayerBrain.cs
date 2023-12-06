@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerBrain : MonoBehaviour
+public class PlayerBrain : BrainEntityController
 {
-    [SerializeField] private Entity entity;
-
     private void Update()
     {
         entity.Move();
@@ -16,7 +14,6 @@ public class PlayerBrain : MonoBehaviour
     {
         if(!context.performed && !context.canceled) return;
 
-        Debug.DrawRay(transform.position, context.ReadValue<Vector2>() * 2, Color.green, Time.deltaTime);
         entity.SetDirection(context.ReadValue<Vector2>());
     }
 }
