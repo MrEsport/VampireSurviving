@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Entity : MonoBehaviour
+public abstract class Entity : MonoBehaviour, Damageable
 {
     [SerializeField] protected EntityData data;
 
@@ -13,5 +13,10 @@ public abstract class Entity : MonoBehaviour
     public void SetDirection(Vector2 direction)
     {
         this.direction = direction;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        data.Health -= damage;
     }
 }
