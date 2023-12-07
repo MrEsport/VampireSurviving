@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class DamageArea : MonoBehaviour
 {
     [SerializeField] private int damageValue;
     [SerializeField] private float damageTickInterval;
+    [SerializeField, Layer] private int collisionLayer;
 
     private float timer = 0f;
     private List<Damageable> damageablesInArea = new List<Damageable>();
@@ -36,6 +38,8 @@ public class DamageArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.layer != collisionLayer) return;
+
         var damageable = collision.GetComponent<Damageable>();
         if (damageable == null) return;
 
@@ -44,6 +48,8 @@ public class DamageArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.layer != collisionLayer) return;
+
         var damageable = collision.GetComponent<Damageable>();
         if (damageable == null) return;
         if (!damageablesInArea.Contains(damageable)) return;
