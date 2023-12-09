@@ -43,11 +43,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4174252177371473543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895ebbe68860d3840ab633a7fabc706a, type: 3}
+  m_Script: {fileID: 11500000, guid: e1873f4bd621fef459001bed8fdc296a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 6171397653447554111}
-  cooldown: 3.5
+  cooldown: 3
   uptime: 0.1
 --- !u!114 &6171397653447554111
 MonoBehaviour:
