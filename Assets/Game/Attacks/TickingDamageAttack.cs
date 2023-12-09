@@ -1,34 +1,47 @@
-using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageArea : MonoBehaviour
+public class TickingDamageAttack : Attack
 {
-    [SerializeField] private int damageValue;
-    [SerializeField] private float damageTickInterval;
-    [SerializeField, Layer] private int collisionLayer;
+    [Header("Ticks Data")]
+    [SerializeField] private float tickIntervalDuration;
 
-    private float timer = 0f;
+    private float tickTimer;
     private List<Damageable> damageablesInArea = new List<Damageable>();
 
     void Start()
     {
-        timer = damageTickInterval;
+        StartAttack();
     }
 
     void Update()
     {
-        timer -= GameplayTime.deltaTime;
+        if (!isActive) return;
 
-        if (timer <= 0f)
+        tickTimer -= GameplayTime.deltaTime;
+
+        if (tickTimer <= 0f)
         {
-            ApplyDamage();
-            timer = damageTickInterval;
+            ApplyTickDamage();
+            tickTimer += tickIntervalDuration;
         }
     }
 
-    private void ApplyDamage()
+    public override void StartAttack()
+    {
+        base.StartAttack();
+        tickTimer = tickIntervalDuration;
+    }
+
+    public override void EndAttack()
+    {
+        base.EndAttack();
+        tickTimer = -1f;
+        damageablesInArea.Clear();
+    }
+
+    private void ApplyTickDamage()
     {
         if (damageablesInArea.Count <= 0) return;
 
@@ -38,6 +51,7 @@ public class DamageArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isActive) return;
         if (collision.gameObject.layer != collisionLayer) return;
 
         var damageable = collision.GetComponent<Damageable>();
@@ -48,6 +62,7 @@ public class DamageArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (!isActive) return;
         if (collision.gameObject.layer != collisionLayer) return;
 
         var damageable = collision.GetComponent<Damageable>();
