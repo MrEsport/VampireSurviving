@@ -8,9 +8,4 @@ public class CharacterEntity : Entity
     {
         transform.Translate(direction * data.MoveSpeed * GameplayTime.deltaTime);
     }
-
-    public override void Attack()
-    {
-        throw new System.NotImplementedException();
-    }
 }

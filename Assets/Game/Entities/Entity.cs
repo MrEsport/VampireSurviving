@@ -9,7 +9,6 @@ public abstract class Entity : MonoBehaviour, Damageable
     protected Vector2 direction;
 
     public abstract void Move();
-    public abstract void Attack();
     public void SetDirection(Vector2 direction)
     {
         this.direction = direction;
