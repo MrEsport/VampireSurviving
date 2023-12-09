@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913409e63eb19b3489b5530f222f220a, type: 3}
+  m_Name: Hammer
+  m_EditorClassIdentifier: 
+  Label: Steel Hammer
+  Icon: {fileID: 1900086577, guid: b440207484c62e148957a11f4252f9cc, type: 3}
+  AttackObjectPrefab: {fileID: 4174252177371473543, guid: 2dd17e1161eb99e46acaf358a25398ec, type: 3}
