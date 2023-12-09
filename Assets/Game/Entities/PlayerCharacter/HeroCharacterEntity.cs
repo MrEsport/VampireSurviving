@@ -24,5 +24,15 @@ public class HeroCharacterEntity : CharacterEntity
             throw new MissingComponentException($"Missing {nameof(AttackHolder)} Component in {attackObject.name}");
 
         playerAttackObjectsList.Add(instanceAttackHolder);
+        OnCharacterDirectionSet.AddListener(instanceAttackHolder.OnCharacterDirectionSet);
+    }
+
+    private void OnDisable()
+    {
+        while (playerAttackObjectsList.Count > 0)
+        {
+            OnCharacterDirectionSet.RemoveListener(playerAttackObjectsList[0].OnCharacterDirectionSet);
+            playerAttackObjectsList.RemoveAt(0);
+        }
     }
 }

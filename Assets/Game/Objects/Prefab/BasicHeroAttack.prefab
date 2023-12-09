@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 6171397653447554111}
+  followMoveDirection: 1
   cooldown: 1
   uptime: 0.1
 --- !u!114 &6171397653447554111

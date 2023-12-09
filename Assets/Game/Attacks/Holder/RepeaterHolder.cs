@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RepeaterHolder : AttackHolder
 {
+    [Header("Repeater")]
     [SerializeField] private float cooldown = 1f;
     [SerializeField] private float uptime = .05f;
 
