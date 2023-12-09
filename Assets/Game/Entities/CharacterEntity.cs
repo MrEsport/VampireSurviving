@@ -4,8 +4,4 @@ using UnityEngine;
 
 public class CharacterEntity : Entity
 {
-    public override void Move()
-    {
-        transform.Translate(direction * data.MoveSpeed * GameplayTime.deltaTime);
-    }
 }
