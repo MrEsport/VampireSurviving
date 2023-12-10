@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2494759210217351867, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494759210217351867, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494759210217351867, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4582460852548568671, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
       propertyPath: data.MoveSpeed
       value: 2
@@ -75,6 +87,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6333342589581739101, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
       insertIndex: 1
       addedObject: {fileID: 5842683178974244543}
+    - targetCorrespondingSourceObject: {fileID: 6333342589581739101, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1277978849277298405}
   m_SourcePrefab: {fileID: 100100000, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
 --- !u!1 &2341434233109202172 stripped
 GameObject:
@@ -95,6 +110,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 5188943220288784126}
   targetTransform: {fileID: 0}
+--- !u!58 &1277978849277298405
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2341434233109202172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.15}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!114 &5188943220288784126 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4582460852548568671, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
