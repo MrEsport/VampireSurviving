@@ -6,6 +6,11 @@ public class FollowBrain : BrainEntityController
 {
     [SerializeField] protected Transform targetTransform;
 
+    public void SetTarget(Transform target)
+    {
+        targetTransform = target;
+    }
+
     private void Update()
     {
         if (targetTransform == null) return;
