@@ -17,9 +17,9 @@ public class AttackObjectUIButtonHandler : MonoBehaviour
 
     private void Start()
     {
-        button.onClick.AddListener(AddObjectToHero);
-
         InitUIData();
+
+        button.onClick.AddListener(() => attackSelectionUIHandler.AddObjectToHero(data));
     }
 
     private void InitUIData()
@@ -28,13 +28,8 @@ public class AttackObjectUIButtonHandler : MonoBehaviour
         iconImage.sprite = data.Icon;
     }
 
-    private void AddObjectToHero()
-    {
-        attackSelectionUIHandler.AddObjectToHero(data);
-    }
-
     private void OnDisable()
     {
-        button.onClick.RemoveListener(AddObjectToHero);
+        button.onClick.RemoveListener(() => attackSelectionUIHandler.AddObjectToHero(data));
     }
 }

@@ -11,6 +11,7 @@ public class ExperienceCounter : MonoBehaviour
 
     [Header("Event")]
     [SerializeField] private UnityEvent<float> OnCounterProgressUpdate = new UnityEvent<float>();
+    [SerializeField] private UnityEvent OnGoalReached = new UnityEvent();
 
     private void Start()
     {
@@ -24,12 +25,22 @@ public class ExperienceCounter : MonoBehaviour
 
     public void GainExp(int gain)
     {
-        SetCount(Mathf.Min(count + gain, goal));
+        SetCount(count + gain);
+
+        if(count >= goal)
+            GoalReached();
     }
 
     private void SetCount(int value)
     {
-        count = value;
+        count = Mathf.Min(value, goal);
         OnCounterProgressUpdate?.Invoke(count / (float)goal);
+    }
+
+    private void GoalReached()
+    {
+        ResetCount();
+        GameplayTime.Pause();
+        OnGoalReached?.Invoke();
     }
 }
