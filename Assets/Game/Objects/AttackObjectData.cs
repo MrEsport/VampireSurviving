@@ -8,9 +8,4 @@ public class AttackObjectData : ScriptableObject
     public string Label;
     public Sprite Icon;
     public GameObject AttackObjectPrefab;
-
-    private void OnEnable()
-    {
-        Label = "New Object";
-    }
 }

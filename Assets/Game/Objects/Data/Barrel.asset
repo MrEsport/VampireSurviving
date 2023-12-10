@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913409e63eb19b3489b5530f222f220a, type: 3}
   m_Name: Barrel
   m_EditorClassIdentifier: 
-  Label: New Object
+  Label: Explosive Barrel
   Icon: {fileID: -1008451742, guid: b440207484c62e148957a11f4252f9cc, type: 3}
   AttackObjectPrefab: {fileID: 4174252177371473543, guid: f714011125087fa4f83da55aa37bf4e4, type: 3}
