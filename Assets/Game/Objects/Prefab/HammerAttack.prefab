@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 6171397653447554111}
+  aimTowardsDirection: 0
   cooldown: 3
   uptime: 0.1
 --- !u!114 &6171397653447554111
@@ -67,7 +68,7 @@ MonoBehaviour:
   OnAttackEnded:
     m_PersistentCalls:
       m_Calls: []
-  damageValue: 200
+  damageValue: 120
   collisionLayer: 11
   hurtbox: {fileID: 7716361807914548124}
   hitOncePerActivation: 1
@@ -100,7 +101,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

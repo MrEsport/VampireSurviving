@@ -4881,7 +4881,7 @@ MonoBehaviour:
   OnAttackEnded:
     m_PersistentCalls:
       m_Calls: []
-  damageValue: 5
+  damageValue: 8
   collisionLayer: 11
   tickIntervalDuration: 0.5
 --- !u!58 &8369832903738545524

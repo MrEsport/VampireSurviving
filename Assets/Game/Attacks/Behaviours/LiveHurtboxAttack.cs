@@ -10,11 +10,6 @@ public class LiveHurtBoxAttack : Attack
 
     private List<Damageable> alreadyHitTargets = new List<Damageable>();
 
-    private void Start()
-    {
-        StartAttack();
-    }
-
     public override void StartAttack()
     {
         base.StartAttack();
