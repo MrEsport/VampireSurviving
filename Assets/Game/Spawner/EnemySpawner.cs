@@ -46,9 +46,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy(GameObject enemy)
     {
-        float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
-        Vector2 spawnPosition = (Vector2)playerTransform.position + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Random.Range(0f, radius.y - radius.x);
-
+        Vector2 spawnPosition = MathfExtension.RandomPointInCircle(playerTransform.position, radius.y - radius.x);
         spawnPosition += (spawnPosition - (Vector2)playerTransform.position).normalized * radius.x;
 
         var instance = Instantiate(enemy, spawnPosition, Quaternion.identity);

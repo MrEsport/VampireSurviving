@@ -35,10 +35,7 @@ public class SpawnerHolder : AttackHolder
     {
         for (int i = 0; i < amount; ++i)
         {
-            float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
-            Vector2 spawnPosition = (Vector2)transform.position + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Random.Range(0f, radius);
-            
-            Instantiate(attackPrefab, spawnPosition, Quaternion.identity);
+            Instantiate(attackPrefab, MathfExtension.RandomPointInCircle(transform.position, radius), Quaternion.identity);
         }
     }
 
