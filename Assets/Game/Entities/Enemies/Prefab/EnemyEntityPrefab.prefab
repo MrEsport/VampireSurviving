@@ -88,6 +88,12 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 5842683178974244543}
     - targetCorrespondingSourceObject: {fileID: 6333342589581739101, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 6759523652468969930}
+    - targetCorrespondingSourceObject: {fileID: 6333342589581739101, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1555313392423579498}
+    - targetCorrespondingSourceObject: {fileID: 6333342589581739101, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1277978849277298405}
   m_SourcePrefab: {fileID: 100100000, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
@@ -110,6 +116,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 5188943220288784126}
   targetTransform: {fileID: 0}
+--- !u!114 &6759523652468969930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2341434233109202172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb553a9980f96374cb045831e8b1ca6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 1555313392423579498}
+  aimTowardsDirection: 0
+--- !u!114 &1555313392423579498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2341434233109202172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204eca46290e2104eb47c02542a4cfac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAttackStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttackEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  damageValue: 1
+  collisionLayer: 10
+  hurtbox: {fileID: 3996614499696518077}
+  hitOncePerActivation: 1
+  resetOnCollision: 1
+  resetCooldown: 0.1
 --- !u!58 &1277978849277298405
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -145,6 +189,11 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.15}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!58 &3996614499696518077 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4678162725168259868, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+  m_PrefabInstance: {fileID: 8618481762377826465}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5188943220288784126 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4582460852548568671, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}

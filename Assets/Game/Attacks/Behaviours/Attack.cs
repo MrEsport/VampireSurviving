@@ -32,4 +32,10 @@ public abstract class Attack : MonoBehaviour
     {
         isActive = active;
     }
+
+    public void ResetAttack()
+    {
+        EndAttack();
+        StartAttack();
+    }
 }

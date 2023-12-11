@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class HeroCharacterEntity : CharacterEntity
@@ -13,6 +14,7 @@ public class HeroCharacterEntity : CharacterEntity
     private void Start()
     {
         AddAttackObject(basicAttackObject);
+        OnDeath.AddListener(() => EditorApplication.isPlaying = false);
     }
 
     public void AddAttackObject(GameObject attackObject)
@@ -34,5 +36,6 @@ public class HeroCharacterEntity : CharacterEntity
             OnCharacterDirectionSet.RemoveListener(playerAttackObjectsList[0].OnCharacterDirectionSet);
             playerAttackObjectsList.RemoveAt(0);
         }
+        OnDeath.RemoveListener(() => EditorApplication.isPlaying = false);
     }
 }
