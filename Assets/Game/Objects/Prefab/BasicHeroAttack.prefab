@@ -4967,7 +4967,7 @@ MonoBehaviour:
   OnAttackEnded:
     m_PersistentCalls:
       m_Calls: []
-  damageValue: 75
+  damageValue: 50
   collisionLayer: 11
   hurtbox: {fileID: 6321203628793699093}
   hitOncePerActivation: 1

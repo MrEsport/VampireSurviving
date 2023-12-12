@@ -11,7 +11,7 @@ public class HeroCharacterEntity : CharacterEntity
 
     private List<AttackHolder> playerAttackObjectsList = new List<AttackHolder>();
 
-    private void Start()
+    protected override void Start()
     {
         AddAttackObject(basicAttackObject);
         OnDeath.AddListener(() => EditorApplication.isPlaying = false);

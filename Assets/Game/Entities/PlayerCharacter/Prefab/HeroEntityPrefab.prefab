@@ -95,6 +95,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7159719209988494501, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      propertyPath: max
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159719209988494501, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      propertyPath: initialValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524994027017202341, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8683522139108960407, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -148,12 +160,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    Health: 100
+    MaxHealth: 100
     MoveSpeed: 4
-    BaseDamage: 50
+    BaseDamage: 1
   OnCharacterDirectionSet:
     m_PersistentCalls:
       m_Calls: []
+  OnHealthUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3384041719773983438}
+        m_TargetAssemblyTypeName: ProgressBarUIHandler, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -205,6 +232,17 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3384041719773983438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7159719209988494501, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}
+  m_PrefabInstance: {fileID: 5596539146905413227}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0889e333ec67ef74b8745512e804e7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8233981061980015632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4606650898079394427, guid: 85aeb5cdea79b864b9258d66e5f63b70, type: 3}

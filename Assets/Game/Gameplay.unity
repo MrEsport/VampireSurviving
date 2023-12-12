@@ -34008,8 +34008,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1448536699}
-        m_TargetAssemblyTypeName: ExperienceProgressUIHandler, Assembly-CSharp
-        m_MethodName: UpdateProgressUIValue
+        m_TargetAssemblyTypeName: ProgressBarUIHandler, Assembly-CSharp
+        m_MethodName: SetValue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

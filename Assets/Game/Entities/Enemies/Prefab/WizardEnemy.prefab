@@ -12,9 +12,21 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -39681849, guid: b440207484c62e148957a11f4252f9cc, type: 3}
+    - target: {fileID: 1497043561614480388, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
+      propertyPath: max
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 1497043561614480388, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
+      propertyPath: initialValue
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 2341434233109202172, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
       propertyPath: m_Name
       value: WizardEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188943220288784126, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
+      propertyPath: data.MaxHealth
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 5188943220288784126, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
       propertyPath: data.MoveSpeed

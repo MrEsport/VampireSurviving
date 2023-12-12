@@ -20,6 +20,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.18
       objectReference: {fileID: 0}
+    - target: {fileID: 1497043561614480388, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
+      propertyPath: max
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1497043561614480388, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
+      propertyPath: initialValue
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2341434233109202172, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
       propertyPath: m_Name
       value: BatEnemy
@@ -30,6 +38,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5188943220288784126, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
       propertyPath: data.Health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188943220288784126, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
+      propertyPath: data.MaxHealth
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5188943220288784126, guid: 51802e4e9d2f0e84788c13903ebdc39a, type: 3}
